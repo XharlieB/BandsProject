@@ -25,7 +25,9 @@ p, h1, h2, h3 ,h4, h5 ,h6{
 .margin-auto{
 	margin: 0 auto;
 }
-
+.flex{
+	display: flex;
+}
 /* estos pertenecen a el index */
 
 .columnas{
@@ -35,11 +37,9 @@ p, h1, h2, h3 ,h4, h5 ,h6{
 	padding-right: 0px;
 	padding-left: 0px;
 }
-
 .descubre-container{
 	width: 100%;
 }
-
 .imagenesDescubre{
 	width: 100%;
 	height: 100%;
@@ -66,9 +66,8 @@ p, h1, h2, h3 ,h4, h5 ,h6{
 }
 
 
+/*estos estilos pertenecen al navbar*/
 
-
-/* Estos estilos pertenecen a crear */
 
 .navbar{
 	border-radius: 0;
@@ -77,8 +76,8 @@ p, h1, h2, h3 ,h4, h5 ,h6{
 .links-nav{
 	color: #C0C0C0;
 	font-family: 'Raleway', sans-serif;
-
-	margin: 0px 20px;
+	transition: background-color .8s ease-out;
+	margin: 0px 10px;
 }
 .links-nav:hover{
 	color: #32C0E0;
@@ -86,6 +85,9 @@ p, h1, h2, h3 ,h4, h5 ,h6{
 }
 .input-nav{
 	width: 350px !important;
+}
+.glyphicon-user{
+	transition: background-color .8s ease-out;
 }
 .glyphicon-user:hover{
 	color: #32C0E0;	
@@ -98,6 +100,16 @@ p, h1, h2, h3 ,h4, h5 ,h6{
 .form-navbar{
 	margin: auto;
 }
+.glyphicon-user{
+	margin-left: 9px;
+}
+.play-nav{
+	margin-right: 12px;
+}
+
+
+/* Estos estilos pertenecen a crear */
+
 body{
 	background-color: #353535;
 }
@@ -106,6 +118,9 @@ body{
 }
 .margin-top-crear{
 	margin-top: 23px;
+}
+.btn-crear{
+	transition: background-color .8s ease-out;
 }
 .btn-crear:hover{
 	background-color: #32C0E0; 
@@ -131,6 +146,7 @@ body{
 .container-thumbnails-venues{
 	display: inline-flex;
 }
+
 .venues-container{
 	width: 543px;
 	margin-top: -17px;
@@ -140,12 +156,10 @@ body{
 	background-color: black;
 	border: none;
 	height: 151px;
+	transition: background-color .8s ease-out;
 }
 .venues-thumbnail:hover{
 	background-color: #32C0E0;
-}
-#venues-thumbnail:focus{
-	background-color: red;	
 }
 .fechas-disponibles{
 	margin-top: 30px;
@@ -193,10 +207,18 @@ body{
 	border-color: #32C0E0;
 	margin: 58px 0px 0px 30px;
 	border-style: dashed;
+	transition: background-color .8s ease-out;
 }
 .circulo-personas-necesarias:hover{
 	background-color: #32C0E0;
 	border-color: #252525;
+	transition: background-color .8s ease-out;
+}
+.circulo-personas-necesarias:hover > #precio{
+	color: #252525;
+}
+.circulo-personas-necesarias:hover > #por-persona{
+	color: #252525;
 }
 .container-vista-previa-necesarias{
 	background-color: #252525;
@@ -229,15 +251,26 @@ body{
     width: 100%;
     font-family: 'raleway', sans-serif;
     background-color: #252525;
-		color: white;
+	color: white;
+	transition: background-color .8s ease-out;
 }
 .btn-crear-evento:hover{
 	background-color: #32C0E0;
 	color: #252525;
+	font-weight: 1000;
 }
-.palomita-aceptar:focus{
+.palomita-aceptar:hover{
 	color: #32C0E0;
 }
+.nombre-modal-crear-evento{
+	color: #252525;
+}
+.terminos-modal{
+	color: #252525;
+}
+
+/*media query de crear */
+
 @media (max-width: 1150px){
 	.venues-container{
 		width: 444px;
@@ -245,4 +278,46 @@ body{
 	.container-vista-previa-necesarias{
 		width: 93.7%;
 	}
+}
+
+
+
+  /*estos estilos pertenecen a el detalle de los eventos*/
+
+
+.main-detalles{
+	margin-top: 65px;
+}
+.container-image-vista{
+	background-image: url('../img/ptv.jpg');
+	background-position: center; 
+	overflow: hidden; 
+	background-size: 300px;
+	background-repeat: no-repeat; 
+	height:	195px; 
+	border-radius: 400px; 
+	margin: 0 auto;
+}
+#container-reproducir{
+	width: 196px;
+    background-size: 300px;
+    height: 195px;
+    border-radius: 400px;
+    margin: 0 auto;
+    opacity: .8;
+    background-color: #252525;
+    margin-top: -195px;
+    display: none;
+
+}
+.container-image-vista:hover > #container-reproducir{
+	display: block;
+	transition: opacity .8s ease-out;
+}
+}
+main hr:first-child{
+	color: white;
+}
+main .flex h1:first-child{
+	margin-top: 12px;
 }

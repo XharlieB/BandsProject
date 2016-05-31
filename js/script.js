@@ -1,4 +1,5 @@
-$(document).ready()
-	$('body').getElementByClass('palomita-aceptar').onClick().css({
-		'color' : '#32C0E0;'
+$(document).ready(function(){
+	$('.container-image-vista').mouseenter(function(evento){
+		$('#container-reproducir').css('display':'block')
 	})
+});

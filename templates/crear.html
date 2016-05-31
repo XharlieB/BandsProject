@@ -23,8 +23,7 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <form class="navbar-form navbar-left" role="search">
         <div class="form-group">  
-          <span class="glyphicon glyphicon-play" aria-hidden="true"></span>
-          <a class="links-nav" href="#">Descubre</a>
+          <span class="glyphicon glyphicon-play play-nav" aria-hidden="true"></span>
           <div class="input-group">
   			<input type="text" class="form-control input-nav" placeholder="Busca por bandas o eventos" aria-describedby="basic-addon1">
   			<span class="input-group-addon font" id="basic-addon1">Buscar</span>
@@ -33,7 +32,8 @@
       </form>
       <form class="navbar-form navbar-right" role="search">
       	<div class="form-group form-navbar">
-      		<a class="links-nav" href="#">Usuario</a>
+      		<a class="links-nav" href="#">Crear</a>
+      		<a href="#" class="links-nav">Descubre</a>
       		<span class="glyphicon glyphicon-user" aria-hidden="true"></span>
       	</div>
       </form>
@@ -83,7 +83,7 @@
 				    <div class="thumbnail venues-thumbnail">
 				      	<img class="image-thumbnail" src="../img/palacion.jpg" alt="Foro Sol">
 				      <div class="caption">
-				        <p class="ellipsis nombre-venue" id="nombre-venue">Palacio de los Deportes</p>
+				        <p class="ellipsis nombre-venue">Palacio de los Deportes</p>
 				      </div>
 				    </div>
 				  </div>
@@ -119,14 +119,33 @@
 				</div>
 				<div class="row">
 					<div class="col-md-6 circulo-personas-necesarias">
-						<h1 class="precio">$500</h1>
-						<h4 class="por-persona">Por 4000 personas</h4>
+						<h1 id="precio" class="precio">$500</h1>
+						<h4 id="por-persona" class="por-persona">Por 4000 personas</h4>
 					</div>
 					<div class="col-md-7">
 						<h5 class="text-necesitas">Necesitas a 4000 personas que quieran ver a Pierce the Veil en el foro solo para que este evento se pueda realizar.</h5>
 						<span class="terminos palomita-aceptar glyphicon glyphicon-ok"></span>
 						<h5 class="terminos"> Acepto los terminos y condiciones</h5>
-						<button class="btn btn-default btn-crear-evento">Crear Evento</button>
+						<button type="button" id="btn-crear-evento" class="btn btn-default btn-crear-evento" data-toggle="modal" data-target="#Modal-Condiciones">Crear Evento</button>
+						<!-- Modal -->
+						<div class="modal fade" id="Modal-Condiciones" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+						  <div class="modal-dialog" role="document">
+						    <div class="modal-content">
+						      <div class="modal-header">
+						        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						        <h4 class="modal-title nombre-modal-crear-evento" id="myModalLabel">Terminos de Crear un Evento</h4>
+						      </div>
+						      <div class="modal-body">
+						      	  <p class="terminos-modal">1.- Al admitir las condiciones y al crear el evento , estas aceptando que si el artista confirma el evento se cobrara a tu tarjeta.</p>
+						      	  <p class="terminos-modal">2.- Trata de compartir y juntar la gente necesaria por que solo puedes tener un mes para juntar la gente</p>
+						      </div>
+						      <div class="modal-footer">
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Declinar</button>
+						        <button type="button" class="btn btn-default" data-dismiss="modal">Crear el Evento</button>
+						      </div>
+						    </div>
+						  </div>
+						</div>
 					</div>
 					<div class="sombre-container-vista"></div>
 					<div class="container-vista-previa-necesarias">
