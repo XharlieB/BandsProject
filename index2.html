@@ -1,1 +1,136 @@
-index2.html
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Bands Project</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/estilos2.css">
+</head>
+<body >
+	<header>
+		<nav class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img class="col-md-2" src="img/logo.png" alt="Logo">
+				</div>
+				<div class="col-md-6 orden">	
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">Sign Up</button>
+					<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+					  <div class="modal-dialog modal-lg">
+					    <div class="modal-content">
+					      <form class="form-horizontal padding">
+							  <div class="form-group form-group-sm">
+							    <label class="col-sm-2 control-label" for="formGroupInputSmall">Username</label>
+							    <div class="col-sm-10">
+							      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Username">
+							    </div>
+							  </div>
+							  <div class="form-group form-group-sm">
+							    <label class="col-sm-2 control-label" for="formGroupInputSmall">Password</label>
+							    <div class="col-sm-10">
+							      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Password">
+							    </div>
+							  </div>
+							  <div class="form-group form-group-sm">
+							    <label class="col-sm-2 control-label" for="formGroupInputSmall">Repeat Password</label>
+							    <div class="col-sm-10">
+							      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Repeat Password">
+							    </div>
+							  </div>
+							  <button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+								  Sign Up
+								</button>
+								<script>
+								  $('#myButton').on('click', function () {
+								    var $btn = $(this).button('loading')
+								    // business logic...
+								    $btn.button('reset')
+								  })
+								</script>
+							</form>
+								<div>
+									<p>Sign Up with Facebook</p>
+									<img class="orden" src="img/fb.png" alt="Facebook">
+								</div>
+								<br>
+								<div>
+									<p>Sign Up with Twitter</p>
+									<img class="orden" src="img/twitter.jpeg" alt="Twitter">
+								</div>
+					    </div>
+					  </div>
+					</div>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#loginModal">Log In</button>
+					<div id="loginModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+					  <div class="modal-dialog modal-lg">
+					    <div class="modal-content">
+							<form class="form-horizontal padding">
+							  <div class="form-group form-group-sm">
+							    <label class="col-sm-2 control-label" for="formGroupInputSmall">Username</label>
+							    <div class="col-sm-10">
+							      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Username">
+							    </div>
+							  </div>
+							  <div class="form-group form-group-sm">
+							    <label class="col-sm-2 control-label" for="formGroupInputSmall">Password</label>
+							    <div class="col-sm-10">
+							      <input class="form-control" type="text" id="formGroupInputSmall" placeholder="Password">
+							    </div>
+							  </div>
+								<button type="button" id="myButton" data-loading-text="Loading..." class="btn btn-primary" autocomplete="off">
+								  Log In
+								</button>
+								<script>
+								  $('#myButton').on('click', function () {
+								    var $btn = $(this).button('loading')
+								    // business logic...
+								    $btn.button('reset')
+								  })
+								</script>
+							</form>
+							<div>
+									<p>Log In with Facebook</p>
+									<img class="orden" src="img/fb.png" alt="Facebook">
+								</div>
+								<br>
+								<div>
+									<p>Log In with Twitter</p>
+									<img  class="orden"src="img/twitter.jpeg" alt="Twitter">
+								</div>
+					    </div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</header>
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<main>
+		<div class="container-fluid">
+  			<div class="row">
+				<div class="col-md-12">Bands Project</div>
+				<br>
+				<br>
+				<div class="col-md-12">Crea, Invita y Promueve, el evento musical de tus sueños.</div>
+				<br>
+				<br>
+				<div class="col-md-8 col-md-offset-2">
+					<input type="text" class="form-control" placeholder="Buscar">
+				</div>
+				<br>
+				<br>
+				<div class="col-md-12">or</div>
+			</div>
+		</div>
+	</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+</body>
+</html>
